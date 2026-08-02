@@ -216,9 +216,9 @@ export class PinchtabClient {
   }
 
   async closeTab(tabId: string): Promise<{ closed: boolean }> {
-    return this.request('/tab', {
+    return this.request('/close', {
       method: 'POST',
-      body: JSON.stringify({ action: 'close', tabId }),
+      body: JSON.stringify({ tabId }),
     });
   }
 
